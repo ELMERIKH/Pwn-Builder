@@ -1,4 +1,4 @@
 pygame
 PILLOW
-tkinter
+tk
 pyinstaller
