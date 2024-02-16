@@ -1,4 +1,6 @@
-GUI virus builder just for fun :)
+Greetings
+-------------
+this is a GUI virus builder just for fun :)
 
 pip install -r requirements.txt
 
