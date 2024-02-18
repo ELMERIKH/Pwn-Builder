@@ -55,7 +55,7 @@ class BuilderApp:
         self.gif_entry.pack(pady=5)
                
                
-        tk.Checkbutton(self.master, text="Terminate Processes", variable=self.terminate_processes_var).pack()
+        tk.Checkbutton(self.master, text="Terminate taskmanager process", variable=self.terminate_processes_var).pack()
 
 
         # Buttons
@@ -74,7 +74,7 @@ class BuilderApp:
         self.upload_gif_button = tk.Button(self.master, text="Upload GIF", command=self.upload_gif, bg="gold", fg="black")
         self.upload_gif_button.pack(pady=5)
 
-        self.start_button = tk.Button(self.master, text="Start Program", command=self.start_program, bg="gold", fg="black")
+        self.start_button = tk.Button(self.master, text="Build", command=self.start_program, bg="gold", fg="black")
         self.start_button.pack(pady=10)
 
     def upload_music1(self):

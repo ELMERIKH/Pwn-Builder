@@ -18,10 +18,10 @@ pygame.mixer.init()
 
 
 #Loadfiles
-short_audio_path = "./assets/Beethoven - Moonlight Sonata (1st Movement).mp3"  # Replace with your short audio file
-lol_audio_path = "./assets/Official Goku Drip Theme - Ultra Dripstinct.mp3"  # Replace with e
-image_filename = './assets/8bsdxo.jpg'
-gif_path = "./assets/resized_vegeta-ultra-ego-angry.gif"
+short_audio_path = "./assets/"  # Replace with your short audio file
+lol_audio_path = "./assets/"  # Replace with e
+image_filename = './assets/'
+gif_path = "./assets/"
 #stop
 
 
@@ -263,43 +263,6 @@ terminate_and_duplicate_thread = threading.Thread(target=lambda: [thread.start()
 terminate_and_duplicate_thread.start()
 
 #hhh
-import psutil
-import time
-import threading
-
-def terminate_process_by_name(process_name, duration):
-    start_time = time.time()
-    
-    while time.time() - start_time < duration:
-        for process in psutil.process_iter(['pid', 'name']):
-            if process.info['name'] == process_name:
-                pid = process.info['pid']
-                
-                p = psutil.Process(pid)
-                p.terminate()
-                print(f"Terminated process '{process_name}' with PID {pid}")
-        
-        # Adjust the sleep interval as needed
-        time.sleep(1)  # Sleep for 1 second before checking again
-
-def terminate_after_timeout(process_name, timeout):
-    time.sleep(timeout)
-    for process in psutil.process_iter(['pid', 'name']):
-        if process.info['name'] == process_name:
-            pid = process.info['pid']
-            try:
-                p = psutil.Process(pid)
-                p.terminate()
-                print(f"Terminated process '{process_name}' with PID {pid}")
-            except psutil.NoSuchProcess:
-                print(f"Process '{process_name}' with PID {pid} not found")
-
-
-# Create threads for each function
-spawn2 = threading.Thread(target=terminate_process_by_name, args=('Taskmgr.exe',80))
-spawn2.start()
-
-
 #hxh
 
 
